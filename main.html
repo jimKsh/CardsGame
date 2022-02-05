@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cards Game</title>
+</head>
+<body>
+    <table id="scores">
+        <thead>
+            <tr>
+                <th rowspan="2">סבב</th>
+                <th colspan="2">קבוצה 1</th>
+                <th colspan="2">קבוצה 2</th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>ניקוד</th>
+                <th>סה״כ</th>
+                <th>ניקוד</th>
+                <th>סה״כ</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+    
+    <form id="add_round" onsubmit="roundFormSubmitHandler(event)">
+        <h2>הוסף סבב</h2>
+        <div id="winnder_select">
+            <label for="winner">מנצח</label>
+            <span>קבוצה 1</span>
+            <input name="winner" type="radio" value="1" checked/>
+            <input name="winner" type="radio" value="2"/>
+            <sapn>קבוצה 2</sapn>
+        </div>
+        <div>
+            <label for="score1">ניקוד קבוצה 1</label>
+            <input id="score1" name="score1" type="number" placeholder="ניקוד קבוצה 1"/>
+        </div>
+        <div>
+            <label for="score2">ניקוד קבוצה 2</label>
+            <input id="score2" name="score2" type="number" placeholder="ניקוד קבוצה 2"/>
+        </div>
+        <button type="submit">הוסף</button>
+    </form>
+    <script src="code.js"></script>
+</body>
+</html>
