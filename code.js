@@ -1,13 +1,4 @@
 // define teams
-const teams = [
-    {
-        players: ["", ""],
-    },
-    {
-        players: ["", ""],
-    }
-]
-
 const rounds = [];
 const MAX_SCORE = 303;
 
@@ -47,7 +38,7 @@ const displayRounds = () => {
             <td>${total1}${total1>total2?` ${winnerSvg}`:``}</td>
             <td>${round.score2}${round.winner==2?` ${medalSvg}`:``}</td>
             <td>${total2}${total1>total2?``:` ${winnerSvg}`}</td>
-            <td>${i==rounds.length-1?`<button onclick="deleteLastRound()">מחק</bitton>`:``}</td>
+            <td>${i==rounds.length-1?`<button class="btn btn-sm btn-warning" onclick="deleteLastRound()">מחק</bitton>`:``}</td>
         </tr>`;
     })
 
@@ -61,4 +52,12 @@ const displayRounds = () => {
 
     // apply to tbody
     document.querySelector('#tbody').innerHTML = tbody;
+}
+
+const swtichScore1 = () => {
+    document.querySelector('#score1').value = -(parseInt(document.querySelector('#score1').value) || 0 )
+}
+
+const swtichScore2 = () => {
+    document.querySelector('#score2').value = -(parseInt(document.querySelector('#score2').value) || 0 )
 }
